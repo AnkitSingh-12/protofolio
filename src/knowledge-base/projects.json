@@ -1,0 +1,80 @@
+[
+  {
+    "id": "worksbuddy-ocr",
+    "title": "WorksBuddy - Local Document AI Pipeline",
+    "subtitle": "Production-Grade Local Document Intelligence & OCR Pipeline",
+    "year": "2026",
+    "category": "AI Engineers & OCR Pipelines",
+    "summary": "Built a scalable local Document Intelligence pipeline for LBM Solution Pvt. Ltd., automating data extraction from invoices, resumes, and visiting cards using FastAPI, PaddleOCR, and local Ollama LLMs (Llama 3.2 / Phi-3) with Pydantic validations.",
+    "techStack": ["Python", "FastAPI", "PaddleOCR", "Ollama (Llama 3.2 / Phi-3)", "Pydantic", "REST APIs"],
+    "githubUrl": "https://github.com/AnkitSingh-12/WorksBuddy-DocumentAI",
+    "liveUrl": "#",
+    "featured": true,
+    "metrics": {
+      "dataEntryReduction": "70% Reduction",
+      "processingSpeed": "< 1.5s / Page",
+      "schemaAccuracy": "99.2% Valid JSON"
+    },
+    "caseStudy": {
+      "problem": "Manual document data entry is highly labor-intensive and poses severe privacy and data residency compliance risks when using commercial APIs.",
+      "research": "Compared PaddleOCR, Tesseract, and EasyOCR, selecting PaddleOCR for superior speed and table parsing.",
+      "architecture": "Asynchronous FastAPI microservice piping image/PDF inputs to PaddleOCR layout analyzers, feeding text blocks to a locally hosted Ollama LLM, and validating structured models via Pydantic.",
+      "challenges": "Ensuring output schema consistency and preventing model hallucinations under tight CPU/GPU memory constraints.",
+      "solutions": "Designed specialized system prompts with strict context boundaries and built an automated feedback loop that re-runs structured corrections upon validation errors.",
+      "performance": "Successfully processed multi-page documents under 1.5 seconds per page with a 99.2% schema compliance rate, eliminating external API fees.",
+      "lessonsLearned": "Local open-source LLMs combined with structural validators (Pydantic) are fully capable of enterprise-grade entity extraction."
+    }
+  },
+  {
+    "id": "rag-qa-system",
+    "title": "Retrieval-Augmented Q&A System (RAG)",
+    "subtitle": "Multi-Document Q&A Pipeline with Agentic Re-Querying",
+    "year": "2026",
+    "category": "GenAI, Agentic AI & NLP",
+    "summary": "Developed an end-to-end RAG pipeline using LangChain, FAISS, and OpenAI/HuggingFace embeddings. Features an integrated CrewAI/LangGraph agent that detects low retrieval confidence and triggers dynamic query expansion.",
+    "techStack": ["Python", "FastAPI", "LangChain", "FAISS", "CrewAI", "LangGraph", "OpenAI Embeddings"],
+    "githubUrl": "https://github.com/AnkitSingh-12/RAG-QA-System",
+    "liveUrl": "#",
+    "featured": true,
+    "metrics": {
+      "retrievalAccuracy": "94% Accuracy",
+      "queryLatency": "< 120ms",
+      "agentSuccessRate": "97% Query Resolution"
+    },
+    "caseStudy": {
+      "problem": "Traditional semantic search often suffers from low precision or returns irrelevant context due to vocabulary mismatch and poor document chunking.",
+      "research": "Evaluated document splitters, embedding dimensions, and top-k retrieval bounds, arriving at recursive character splitting with a chunk overlap of 200 tokens.",
+      "architecture": "FastAPI backend exposing retrieval endpoints mapped to a localized FAISS vector store, orchestrating query correction via LangGraph agents.",
+      "challenges": "Handling ambiguous queries or out-of-distribution questions without serving wrong or hallucinated responses.",
+      "solutions": "Implemented a LangGraph supervisor agent that analyzes initial similarity search scores. If confidence falls below 0.75, it spawns a CrewAI search worker to expand the query terms.",
+      "performance": "Maintained retrieval latency under 120ms while resolving 97% of low-confidence queries cleanly.",
+      "lessonsLearned": "Using agentic fallback systems is highly effective at boosting RAG retrieval precision and user satisfaction."
+    }
+  },
+  {
+    "id": "laptop-price-prediction",
+    "title": "Laptop Price Prediction",
+    "subtitle": "Supervised Machine Learning Regression & Feature Engineering Model",
+    "year": "2025",
+    "category": "AI Engineers & OCR Pipelines",
+    "summary": "Built a supervised regression model predicting laptop prices from hardware configurations. Performed exploratory data analysis, target encoding, log transformations, and hyperparameter tuning using Scikit-Learn.",
+    "techStack": ["Python", "Scikit-Learn", "Pandas", "NumPy", "Matplotlib", "Seaborn", "Jupyter Notebook"],
+    "githubUrl": "https://github.com/AnkitSingh-12/Laptop-Price-Prediction",
+    "liveUrl": "#",
+    "featured": true,
+    "metrics": {
+      "r2Score": "89.5% Accuracy",
+      "datasetSize": "10,000+ Records",
+      "features": "12 Core Specs"
+    },
+    "caseStudy": {
+      "problem": "Categorical attributes and manufacturer pricing strategies introduce heavy non-linearity into raw market prices, making simple regressions inaccurate.",
+      "research": "Conducted thorough EDA to identify price skewness and applied log scaling on the target variable to achieve a normal distribution.",
+      "architecture": "A clean pipeline in Jupyter executing dataset cleansing, target-encoding brand categorical fields, and scaling numeric metrics.",
+      "challenges": "Controlling overfitting on high-cardinality columns like processor model numbers.",
+      "solutions": "Optimized models using Grid Search on Random Forest Regressors, comparing results against Linear and Decision Tree baselines.",
+      "performance": "The tuned Random Forest model achieved an 89.5% R2 score with a mean absolute percentage error (MAPE) under 8%.",
+      "lessonsLearned": "Rigorous data preprocessing and categorical feature engineering are the most critical factors for tabular model performance."
+    }
+  }
+]

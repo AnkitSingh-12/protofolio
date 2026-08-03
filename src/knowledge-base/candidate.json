@@ -1,0 +1,34 @@
+{
+  "fullName": "Ankit Singh",
+  "title": "AI Engineer & Data Analyst",
+  "location": "Punjab / Bihar, India",
+  "email": "ankit.as.singh12@gmail.com",
+  "phone": "+91 8777728034",
+  "github": "https://github.com/AnkitSingh-12",
+  "linkedin": "https://www.linkedin.com/in/ankitsingh12",
+  "bio": "AI Engineer with hands-on experience building production document-intelligence systems using FastAPI, OCR, and locally hosted LLMs (Ollama – Phi-3 / Llama 3.2, Qwen3:8B), plus applied RAG pipeline development using LangChain and FAISS. Proficient in Python, SQL (PostgreSQL, MySQL), Machine Learning, and data analytics.",
+  "status": "Open to Full-Time Roles & Opportunities (AI Engineer / Data Analyst)",
+  "vtuCgpa": "B.Tech CS Graduate",
+  "languages": [
+    {
+      "name": "English",
+      "fluency": "Fluent",
+      "level": "Professional"
+    },
+    {
+      "name": "Hindi",
+      "fluency": "Native",
+      "level": "Native"
+    }
+  ],
+  "targetCompanies": [
+    "Google",
+    "Microsoft",
+    "OpenAI",
+    "Meta",
+    "Amazon",
+    "Nvidia",
+    "Apple"
+  ],
+  "mextGoal": ""
+}

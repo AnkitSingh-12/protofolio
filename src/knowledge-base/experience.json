@@ -1,0 +1,22 @@
+[
+  {
+    "id": "lbm-ai-engineer",
+    "role": "AI Engineer (OCR & Document Intelligence)",
+    "organization": "LBM Solution Pvt. Ltd. (WorksBuddy)",
+    "location": "Punjab, India",
+    "duration": "Nov 2025 – Present",
+    "type": "Full-time Engineering",
+    "description": "Architected and deployed a scalable Document Intelligence pipeline automating data extraction from invoices, resumes, and visiting cards, reducing manual data-entry effort by ~70%. Built an end-to-end OCR + LLM inference pipeline converting unstructured files into validated Pydantic JSON schemas, eliminating manual post-processing. Designed and shipped a RESTful FastAPI service on a fully local, open-source stack (FastAPI, PaddleOCR, local Ollama LLMs) to ensure complete data-residency compliance and zero API fees.",
+    "skillsLearned": ["Python", "FastAPI", "PaddleOCR", "Ollama LLMs (Phi-3 / Llama 3.2)", "Pydantic Schemas", "REST APIs", "JSON Extraction", "Privacy Security"]
+  },
+  {
+    "id": "jspiders-data-analyst",
+    "role": "Data Analyst Intern",
+    "organization": "JSPIDERS Pvt. Ltd.",
+    "location": "Bengaluru, India",
+    "duration": "May 2025 – Sept 2025",
+    "type": "Internship",
+    "description": "Conducted exploratory data analysis (EDA) on student performance datasets using Python to surface academic risk trends, reducing score variance by 20%. Quantified the impacts of key sociological performance drivers by building segmented statistical comparisons, translating findings into actionable academic recommendations.",
+    "skillsLearned": ["Python", "SQL", "Pandas", "NumPy", "Seaborn", "Matplotlib", "Exploratory Data Analysis (EDA)", "Data Visualization"]
+  }
+]

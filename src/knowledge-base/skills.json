@@ -1,0 +1,31 @@
+[
+  {
+    "category": "GenAI, Agentic AI & NLP",
+    "skills": [
+      { "name": "Agentic AI & Orchestration", "level": 90, "icon": "Cpu", "tags": ["LangGraph", "CrewAI", "MCP", "Multi-Agent Systems"] },
+      { "name": "RAG & LLM Pipelines", "level": 92, "icon": "Sparkles", "tags": ["LangChain", "FAISS", "ChromaDB", "Prompt Engineering", "OpenAI/HuggingFace Embeddings"] },
+      { "name": "Deep Learning & NLP", "level": 86, "icon": "Brain", "tags": ["CNN", "RNN", "LSTM", "Transformers", "Encoders-Decoders"] }
+    ]
+  },
+  {
+    "category": "AI Engineers & OCR Pipelines",
+    "skills": [
+      { "name": "Document Intelligence", "level": 94, "icon": "FileCode", "tags": ["FastAPI", "PaddleOCR", "Local LLMs", "Ollama", "Llama 3.2 / Phi-3", "Pydantic Validation"] },
+      { "name": "Python Machine Learning", "level": 90, "icon": "Code", "tags": ["Regression", "Classification", "Decision Trees", "Random Forest", "XGBoost", "Scikit-Learn"] }
+    ]
+  },
+  {
+    "category": "Data Analytics & Databases",
+    "skills": [
+      { "name": "Exploratory Data Analysis", "level": 92, "icon": "BarChart2", "tags": ["Pandas", "NumPy", "Data Cleaning", "Feature Engineering"] },
+      { "name": "Databases & Storage", "level": 88, "icon": "Database", "tags": ["PostgreSQL", "MySQL", "ChromaDB", "FAISS", "Pinecone"] }
+    ]
+  },
+  {
+    "category": "Tools & Data Visualization",
+    "skills": [
+      { "name": "Data Visualization", "level": 86, "icon": "TrendingUp", "tags": ["Matplotlib", "Seaborn", "Tableau", "Power BI", "Dashboards"] },
+      { "name": "Tools & Development", "level": 90, "icon": "Server", "tags": ["Git", "GitHub", "Jira", "Streamlit", "VS Code", "Jupyter Notebook", "REST APIs"] }
+    ]
+  }
+]

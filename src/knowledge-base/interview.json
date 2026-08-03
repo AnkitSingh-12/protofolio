@@ -1,0 +1,36 @@
+[
+  {
+    "role": "AI / ML Engineer",
+    "questions": [
+      {
+        "id": "aiml-1",
+        "question": "How did you design the local document intelligence pipeline in WorksBuddy to run without external API costs?",
+        "idealKeywords": ["fastapi", "paddleocr", "ollama", "local llm", "llama 3.2", "pydantic", "data residency"],
+        "sampleAnswer": "In WorksBuddy, we designed a fully local pipeline. First, we run PaddleOCR locally to detect text layout and extract raw characters. We pass these blocks to a local Ollama LLM (running Llama 3.2 or Phi-3) using structured system prompts, and validate the output using Pydantic models. This avoids cloud costs, ensures strict data residency compliance, and reduces data-entry efforts by ~70%."
+      },
+      {
+        "id": "aiml-2",
+        "question": "What role does the agentic supervisor play in your RAG pipeline?",
+        "idealKeywords": ["langchain", "faiss", "langgraph", "crewai", "confidence score", "fallback", "query expansion"],
+        "sampleAnswer": "We integrated a LangGraph supervisor agent over our standard LangChain RAG pipeline. When a similarity query is run in FAISS, the supervisor checks the retrieval score. If the score falls below a threshold, it activates a secondary CrewAI agent to dynamically expand the query terms, correcting vocabulary mismatches before retrieving again. This fallback loop ensures 97% of previously ambiguous queries are correctly resolved."
+      }
+    ]
+  },
+  {
+    "role": "Data Analyst",
+    "questions": [
+      {
+        "id": "da-1",
+        "question": "How did you identify key performance factors during your student dataset analysis at JSPIDERS?",
+        "idealKeywords": ["eda", "exploratory data analysis", "pandas", "seaborn", "score variance", "statistical comparison"],
+        "sampleAnswer": "I conducted exploratory data analysis (EDA) using Pandas and Seaborn to visualize distributions. By segmenting students based on parental education levels, test preparation, and sociological features, I built comparisons that showed where performance gaps were largest, identifying critical risk patterns and reducing variance by 20%."
+      },
+      {
+        "id": "da-2",
+        "question": "Explain how you address target variable skewness in tabular regression models.",
+        "idealKeywords": ["skewness", "log transform", "normal distribution", "scaling", "random forest", "residuals"],
+        "sampleAnswer": "Continuous targets like price often exhibit right-skewness, causing model residuals to violate homoscedasticity assumptions. In my laptop price prediction project, I applied a log transformation to normalize the distribution, scaling features with StandardScaler before training the Random Forest regressor, which boosted R2 accuracy to 89.5%."
+      }
+    ]
+  }
+]

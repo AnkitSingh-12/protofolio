@@ -1,0 +1,60 @@
+[
+  {
+    "keywords": [
+      "college",
+      "degree",
+      "education",
+      "cec",
+      "chandigarh",
+      "punjab",
+      "bihar"
+    ],
+    "response": "Ankit Singh completed his Bachelor of Technology (B.Tech) in Computer Science & Engineering (AI & ML) (2020–2024) at Chandigarh Engineering College, Punjab. Prior to his B.Tech, he completed his 12th standard in Science & Mathematics in March 2020 at Phulamati Gena Rawat High School in Bihar."
+  },
+  {
+    "keywords": [
+      "experience",
+      "worksbuddy",
+      "lbm",
+      "jspiders",
+      "internship",
+      "job",
+      "role"
+    ],
+    "response": "Ankit is currently an AI Engineer at LBM Solution Pvt. Ltd. (Nov 2025 – Present), working on the OCR - WorksBuddy document extraction pipeline using FastAPI, PaddleOCR, and local LLMs. He previously completed a Data Analyst Internship at JSPIDERS Pvt. Ltd. (May 2025 – Sept 2025) analyzing student performance metrics."
+  },
+  {
+    "keywords": [
+      "projects",
+      "rag",
+      "qa",
+      "regression",
+      "laptop",
+      "price",
+      "ocr",
+      "work"
+    ],
+    "response": "Ankit has built 3 major AI & data systems: 1) WorksBuddy Local Document AI (PaddleOCR + local LLMs in FastAPI), 2) Retrieval-Augmented Q&A System (LangChain & FAISS with agentic fallback), and 3) Laptop Price Prediction model (supervised ML regression using Scikit-Learn)."
+  },
+  {
+    "keywords": [
+      "certifications",
+      "cisco",
+      "endpoint",
+      "security",
+      "badge"
+    ],
+    "response": "Ankit holds a verified certification in Endpoint Security from Cisco Networking Academy, demonstrating capabilities in endpoint protection, threat mitigation, and network security concepts."
+  },
+  {
+    "keywords": [
+      "contact",
+      "email",
+      "phone",
+      "github",
+      "linkedin",
+      "hire"
+    ],
+    "response": "You can reach Ankit via Email: ankit.as.singh12@gmail.com, Phone: +91 8777728034, GitHub: github.com/AnkitSingh-12, or LinkedIn: linkedin.com/in/ankitsingh12."
+  }
+]

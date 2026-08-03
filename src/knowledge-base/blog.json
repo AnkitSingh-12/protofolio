@@ -1,0 +1,35 @@
+[
+  {
+    "id": "rag-agentic-query-expansion",
+    "title": "Designing High-Precision RAG Architectures with Agentic Query Expansion",
+    "slug": "rag-agentic-query-expansion",
+    "date": "2026-07-28",
+    "readTime": "6 min read",
+    "category": "GenAI & RAG",
+    "tags": ["RAG", "LangChain", "FAISS", "LangGraph", "Agentic AI"],
+    "summary": "A walkthrough of how to build retrieval-augmented generation systems that dynamically expand queries and fallback to multi-agent workers when search confidence is low.",
+    "content": "### Introduction\nRetrieval-Augmented Generation (RAG) is the industry standard for querying proprietary documents. However, simple semantic vector matching often falls short when user queries are ambiguous or brief.\n\n### The Agentic Solution\nBy wrapping our FAISS similarity search in a LangGraph controller, we inspect the retrieval confidence score. If the score is below our threshold (0.75), we route the query to a CrewAI agent that performs query expansion, resolving vocabulary mismatch and boosting retrieval accuracy.\n\n```python\n# Checking retrieval threshold in Python\nif score < 0.75:\n    expanded_query = query_expansion_agent.run(original_query)\n    results = vector_db.similarity_search(expanded_query)\n```\n\n### Conclusion\nUsing an agentic check loop adds minor latency but dramatically boosts RAG reliability and accuracy."
+  },
+  {
+    "id": "local-ocr-llm-pipelines",
+    "title": "Deploying Cost-Effective OCR & Local LLM Pipelines in Production",
+    "slug": "local-ocr-llm-pipelines",
+    "date": "2026-06-15",
+    "readTime": "7 min read",
+    "category": "OCR & Document AI",
+    "tags": ["FastAPI", "PaddleOCR", "Local LLMs", "Ollama", "Pydantic"],
+    "summary": "Inside the architecture of WorksBuddy: how asynchronous FastAPI endpoints, PaddleOCR, and local Ollama model instances achieve 70% manual data entry reduction with zero API fees.",
+    "content": "### Privacy and Zero API Fees\nFor enterprise workflows involving invoices or resumes, sending data to public cloud APIs violates data-residency regulations and incurs substantial operating costs. \n\n### The Pipeline\nWorksBuddy processes documents locally:\n1. **PaddleOCR** layout analysis extracts coordinate-bounded text blocks.\n2. **Ollama** runs Llama 3.2 / Phi-3 locally to parse structured JSON entities.\n3. **Pydantic** models enforce schema validation, with error feedback loops self-correcting the LLM output.\n\n```python\n# Defining Pydantic extraction schema\nclass InvoiceSchema(BaseModel):\n    invoice_number: str\n    total_amount: float\n    items: List[Item]\n```"
+  },
+  {
+    "id": "feature-engineering-tabular-regression",
+    "title": "Feature Engineering vs. Model Depth in Tabular Regression Tasks",
+    "slug": "feature-engineering-tabular-regression",
+    "date": "2026-05-10",
+    "readTime": "5 min read",
+    "category": "Machine Learning",
+    "tags": ["Machine Learning", "Scikit-Learn", "Feature Engineering", "EDA"],
+    "summary": "Key lessons from building a laptop price prediction model: how log transforms, target encoding, and scaling outperform deep network baselines.",
+    "content": "### Tabular Data Best Practices\nWhen predicting numerical targets from a mix of high-cardinality categorical fields and skewed continuous variables, simple neural nets often overfit.\n\nKey techniques utilized:\n- **Log Transformation**: Correcting right-skewed target variables (like pricing).\n- **Target Encoding**: Converting complex strings (like hardware specs) into numerical means.\n- **Grid Search CV**: Finding optimal max_depth and min_samples_split for Random Forest estimators."
+  }
+]
