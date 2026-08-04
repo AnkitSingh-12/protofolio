@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     title: 'Ankit Singh | AI Engineer & Data Analyst Portfolio',
     description: 'Production-grade AI portfolio featuring WorksBuddy OCR, RAG System, and supervised ML models.',
     type: 'website',
-    url: 'https://ankit-portfolio.vercel.app',
+    url: process.env.NEXT_PUBLIC_SITE_URL || 'https://ankit-portfolio.netlify.app',
   },
   twitter: {
     card: 'summary_large_image',
