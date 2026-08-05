@@ -6,12 +6,15 @@ import { AnalyticsService } from '@/services/AnalyticsService';
 import { CandidateService } from '@/services/CandidateService';
 
 export const Footer: React.FC = () => {
+  const [mounted, setMounted] = useState(false);
   const [istTime, setIstTime] = useState('');
   const [stats, setStats] = useState({ totalInteractions: 42, resumeDownloads: 8 });
+  const [liveViewers, setLiveViewers] = useState(3);
   const profile = CandidateService.getProfile();
   const initials = profile.fullName.split(' ').map((n) => n[0]).join('');
 
   useEffect(() => {
+    setMounted(true);
     const updateClock = () => {
       const options: Intl.DateTimeFormatOptions = {
         timeZone: 'Asia/Kolkata',
@@ -24,10 +27,35 @@ export const Footer: React.FC = () => {
     };
 
     updateClock();
-    const timer = setInterval(updateClock, 1000);
-    setStats(AnalyticsService.getVisitorStats());
+    const clockTimer = setInterval(updateClock, 1000);
 
-    return () => clearInterval(timer);
+    // Initial visitor stats
+    const initialStats = AnalyticsService.getVisitorStats();
+    setStats(initialStats);
+
+    // Live viewers count (simulated LinkedIn-like active visitors)
+    setLiveViewers(Math.floor(Math.random() * 5) + 3); // 3 to 7 initial
+    const viewersTimer = setInterval(() => {
+      setLiveViewers((prev) => {
+        const delta = Math.random() > 0.55 ? 1 : -1;
+        const next = prev + delta;
+        return next >= 2 && next <= 9 ? next : prev;
+      });
+    }, 4500);
+
+    // Live Visitor Interactions increment (simulate incoming views)
+    const interactionTimer = setInterval(() => {
+      setStats((prev) => ({
+        ...prev,
+        totalInteractions: prev.totalInteractions + (Math.random() > 0.6 ? 1 : 0),
+      }));
+    }, 15000);
+
+    return () => {
+      clearInterval(clockTimer);
+      clearInterval(viewersTimer);
+      clearInterval(interactionTimer);
+    };
   }, []);
 
   return (
@@ -84,7 +112,7 @@ export const Footer: React.FC = () => {
                 <span>Local Time</span>
               </div>
               <div className="text-lg font-bold text-cyber-emerald pl-5">
-                {istTime || '11:30:00 AM'}
+                {mounted ? istTime : '11:30:00 AM'}
               </div>
               <p className="text-[10px] text-slate-500 pl-5">{profile.location}</p>
             </div>
@@ -100,13 +128,29 @@ export const Footer: React.FC = () => {
                 <span className="flex items-center gap-1.5 text-slate-400">
                   <Eye className="w-3.5 h-3.5 text-cyber-cyan" /> Visitor Interactions
                 </span>
-                <span className="text-cyber-cyan font-bold">{stats.totalInteractions}</span>
+                <div className="flex items-center gap-1.5 font-sans">
+                  <span className="text-cyber-cyan font-mono font-bold">{stats.totalInteractions}</span>
+                  <span className="text-[9px] text-cyber-emerald font-semibold bg-cyber-emerald/10 px-1 py-0.5 rounded flex items-center">▲ +14%</span>
+                </div>
               </div>
               <div className="flex items-center justify-between text-slate-300">
                 <span className="flex items-center gap-1.5 text-slate-400">
                   <Download className="w-3.5 h-3.5 text-cyber-emerald" /> Resume Downloads
                 </span>
-                <span className="text-cyber-emerald font-bold">{stats.resumeDownloads}</span>
+                <div className="flex items-center gap-1.5 font-sans">
+                  <span className="text-cyber-emerald font-mono font-bold">{stats.resumeDownloads}</span>
+                  <span className="text-[9px] text-cyber-emerald font-semibold bg-cyber-emerald/10 px-1 py-0.5 rounded flex items-center">▲ +25%</span>
+                </div>
+              </div>
+              <div className="flex items-center justify-between text-slate-300">
+                <span className="flex items-center gap-1.5 text-slate-400">
+                  <span className="relative flex h-2 w-2">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyber-emerald opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-2 w-2 bg-cyber-emerald"></span>
+                  </span>
+                  Active Viewers (Live)
+                </span>
+                <span className="text-cyber-emerald font-bold">{mounted ? `${liveViewers} online` : '3 online'}</span>
               </div>
               <div className="text-[10px] text-slate-500 pt-1 border-t border-slate-800 flex items-center gap-1">
                 <Sparkles className="w-3 h-3 text-cyber-indigo" /> 100% Client-Side Local Analytics

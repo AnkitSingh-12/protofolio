@@ -36,7 +36,7 @@ export class AnalyticsService {
   public static getVisitorStats() {
     const events = this.getEvents();
     return {
-      totalInteractions: events.length + 42, // Base initial engagement counter
+      totalInteractions: events.length + 43, // Base initial engagement counter
       resumeDownloads: events.filter((e) => e.eventType === 'DOWNLOAD_RESUME').length + 8,
       githubClicks: events.filter((e) => e.eventType === 'GITHUB_CLICK').length + 19,
       copilotQueries: events.filter((e) => e.eventType === 'COPILOT_QUERY').length + 27,
