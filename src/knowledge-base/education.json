@@ -1,27 +1,27 @@
 [
   {
     "id": "cec-btech-cse",
-    "institution": "Chandigarh Engineering College",
-    "degree": "Bachelor of Technology (B.Tech) in Computer Science & Engineering (AI & ML)",
+    "institution": "Chandigarh Engineering College, Punjab",
+    "degree": "Bachelor of Technology in Computer Science & Engineering",
     "duration": "Sept 2020 – June 2024",
     "grade": "Graduate",
     "location": "Punjab, India",
     "highlights": [
-      "Specialized coursework in Data Structures & Algorithms, Database Management Systems, Operating Systems, and Machine Learning",
-      "Focused on practical implementation of RAG pipelines, linear/logistic regression, and random forest modeling",
-      "Applied computer science foundations to document parsing and analytics workflows"
+      "Rigorous 4-year degree in Computer Science & Engineering with comprehensive coursework in Data Structures, Algorithms, Machine Learning, DBMS, and Operating Systems",
+      "Hands-on application development in Python, relational databases (PostgreSQL/MySQL), and neural network architectures",
+      "Engineered foundational AI pipelines, semantic search engines, and real-time data processing workflows"
     ]
   },
   {
     "id": "high-school-bihar",
-    "institution": "Phulamati Gena Rawat High School",
-    "degree": "12th Standard — Science & Mathematics",
+    "institution": "Phulamati Gena Rawat High School, Bihar",
+    "degree": "12th Science & Mathematics",
     "duration": "March 2020",
     "grade": "Completed",
     "location": "Bihar, India",
     "highlights": [
-      "Rigorous coursework in Mathematics, Physics, and Chemistry",
-      "Developed early interest in numerical methods and computation"
+      "Secondary education with focused specialization in Mathematics, Physics, and Chemistry",
+      "Developed mathematical modeling foundations, statistical reasoning, and analytical problem-solving"
     ]
   }
 ]

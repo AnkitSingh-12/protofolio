@@ -10,7 +10,7 @@ export const AiCopilotDrawer: React.FC = () => {
   const [messages, setMessages] = useState<{ sender: 'user' | 'bot'; text: string }[]>([
     {
       sender: 'bot',
-      text: "Hi! I am Ankit's AI Portfolio Copilot. Ask me anything about his projects (WorksBuddy OCR, RAG System, Laptop Price Prediction), CEC B.Tech degree, or work experience!",
+      text: "Hi! I am Ankit's AI Portfolio Copilot. Ask me anything about his projects (Autonomous AI Leads Platform, RAG System), CEC B.Tech degree, or work experience!",
     },
   ]);
   const [input, setInput] = useState('');
@@ -80,7 +80,7 @@ export const AiCopilotDrawer: React.FC = () => {
 
           {/* Quick Prompt Pills */}
           <div className="p-2 bg-cyber-dark/80 border-t border-cyber-border flex gap-1.5 overflow-x-auto text-[10px] font-mono">
-            {['Tell me about WorksBuddy OCR', 'B.Tech Education', 'RAG Pipeline Project'].map((pill) => (
+            {['Autonomous AI Leads', 'Voice Agent', 'RAG Pipeline Project', 'CEC B.Tech Education'].map((pill) => (
               <button
                 key={pill}
                 onClick={() => handleSend(pill)}

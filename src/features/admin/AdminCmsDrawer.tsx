@@ -77,10 +77,10 @@ export const AdminCmsDrawer: React.FC<AdminCmsDrawerProps> = ({ isOpen, onClose 
           </div>
 
           <div>
-            <label className="text-slate-300">VTU USN:</label>
+            <label className="text-slate-300">College / University:</label>
             <input
               type="text"
-              value={form.usn}
+              value={form.usn || form.location}
               onChange={(e) => setForm({ ...form, usn: e.target.value })}
               className="w-full p-2.5 rounded-xl bg-cyber-dark border border-cyber-border text-white focus:outline-none focus:border-cyber-indigo"
             />

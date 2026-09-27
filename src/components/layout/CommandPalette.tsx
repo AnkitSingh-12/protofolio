@@ -47,7 +47,6 @@ export const CommandPalette: React.FC<CommandPaletteProps> = ({ isOpen, onClose 
     { title: 'Skills Matrix', href: '#skills', icon: Code },
     { title: 'Experience & Education', href: '#experience', icon: Briefcase },
     { title: 'Projects Showcase', href: '#projects', icon: Code },
-    { title: 'System Design Flows', href: '#system-design', icon: Sparkles },
     { title: 'Certifications', href: '#certifications', icon: Award },
     { title: 'Blog Reader', href: '#blog', icon: BookOpen },
     { title: 'ATS Resume Builder', href: '#resume', icon: Briefcase },

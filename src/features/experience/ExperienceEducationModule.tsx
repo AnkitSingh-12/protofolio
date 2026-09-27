@@ -15,13 +15,13 @@ export const ExperienceEducationModule: React.FC = () => {
         <div className="text-center space-y-3">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyber-emerald/10 border border-cyber-emerald/30 text-cyber-emerald font-mono text-xs">
             <Briefcase className="w-3.5 h-3.5" />
-            <span>TIMELINE & INDUSTRY TRAINING</span>
+            <span>WORK EXPERIENCE & INDUSTRY TIMELINE</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-display font-bold text-white">
-            Professional Training & Key Credentials
+            Professional Experience & AI Deployments
           </h2>
           <p className="text-slate-400 text-sm max-w-2xl mx-auto">
-            Hands-on offline full-stack development experience and industry verified credentials.
+            Hands-on engineering track record developing production AI applications, MCP business agents, real-time voice pipelines, document intelligence, and data analytics.
           </p>
         </div>
 

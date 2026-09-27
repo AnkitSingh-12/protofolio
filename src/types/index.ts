@@ -5,6 +5,7 @@ export interface Candidate {
   location: string;
   email: string;
   phone: string;
+  whatsapp?: string;
   github: string;
   linkedin: string;
   bio: string;

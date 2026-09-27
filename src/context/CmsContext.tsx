@@ -64,7 +64,7 @@ const CmsContext = createContext<CmsContextType>({
   importJSON: () => false,
 });
 
-const STORAGE_KEY = 'antigravity_master_portfolio_cms_v2';
+const STORAGE_KEY = 'antigravity_master_portfolio_cms_v5';
 
 export const CmsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [state, setState] = useState<FullPortfolioState>(defaultPortfolioState);
@@ -72,25 +72,16 @@ export const CmsProvider: React.FC<{ children: React.ReactNode }> = ({ children 
 
   useEffect(() => {
     try {
+      // Clear legacy storage to prevent loading obsolete projects or old details
+      localStorage.removeItem('antigravity_master_portfolio_cms_v4');
+      localStorage.removeItem('antigravity_master_portfolio_cms_v3');
+      localStorage.removeItem('antigravity_master_portfolio_cms_v2');
+      localStorage.removeItem('antigravity_master_portfolio_cms_v1');
+      
       const saved = localStorage.getItem(STORAGE_KEY);
       if (saved) {
         const parsed = JSON.parse(saved);
-        
-        // Auto-migrate old education degree in local storage to include (AI & ML)
-        if (parsed.education && Array.isArray(parsed.education)) {
-          parsed.education = parsed.education.map((edu: any) => {
-            if (
-              edu.id === 'cec-btech-cse' ||
-              (edu.institution && edu.institution.includes('Chandigarh Engineering College'))
-            ) {
-              edu.degree = 'Bachelor of Technology (B.Tech) in Computer Science & Engineering (AI & ML)';
-            }
-            return edu;
-          });
-        }
-        
         setState((prev) => ({ ...prev, ...parsed }));
-        localStorage.setItem(STORAGE_KEY, JSON.stringify(parsed));
       }
       // Restore session if owner was logged in
       if (sessionStorage.getItem('owner_auth') === '1') setEditMode(true);

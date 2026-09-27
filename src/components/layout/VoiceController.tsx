@@ -60,11 +60,8 @@ export const VoiceController: React.FC<VoiceControllerProps> = ({ isOpen, onClos
     } else if (cmd.includes('blog') || cmd.includes('article') || cmd.includes('note')) {
       window.location.hash = '#blog';
       setStatusMessage('Navigating to Engineering Blog...');
-    } else if (cmd.includes('design') || cmd.includes('architecture') || cmd.includes('system')) {
-      window.location.hash = '#system-design';
-      setStatusMessage('Navigating to System Design Visualizers...');
     } else {
-      setStatusMessage(`Command "${cmd}" received. Try "about", "projects", "skills", "system design", "blog", "resume", or "contact".`);
+      setStatusMessage(`Command "${cmd}" received. Try "about", "projects", "skills", "experience", "blog", "resume", or "contact".`);
     }
   };
 

@@ -7,9 +7,11 @@
       "cec",
       "chandigarh",
       "punjab",
-      "bihar"
+      "bihar",
+      "btech",
+      "school"
     ],
-    "response": "Ankit Singh completed his Bachelor of Technology (B.Tech) in Computer Science & Engineering (AI & ML) (2020–2024) at Chandigarh Engineering College, Punjab. Prior to his B.Tech, he completed his 12th standard in Science & Mathematics in March 2020 at Phulamati Gena Rawat High School in Bihar."
+    "response": "Ankit Singh completed his Bachelor of Technology (B.Tech) in Computer Science & Engineering (Sept 2020 – June 2024) at Chandigarh Engineering College, Punjab. He completed his 12th standard in Science & Mathematics in March 2020 at Phulamati Gena Rawat High School in Bihar."
   },
   {
     "keywords": [
@@ -21,30 +23,28 @@
       "job",
       "role"
     ],
-    "response": "Ankit is currently an AI Engineer at LBM Solution Pvt. Ltd. (Nov 2025 – Present), working on the OCR - WorksBuddy document extraction pipeline using FastAPI, PaddleOCR, and local LLMs. He previously completed a Data Analyst Internship at JSPIDERS Pvt. Ltd. (May 2025 – Sept 2025) analyzing student performance metrics."
+    "response": "Ankit is an Artificial Intelligence Engineer at LBM Solution Pvt. Ltd. — WorksBuddy.Ai (Dec 2025 – Present), engineering MCP-based business agents (Lio, Taro, Evox & Inzo), real-time AI voice agents (LangGraph, Pipecat, LiveKit, Deepgram, ElevenLabs, Mem0), and local Document Intelligence OCR solutions (PaddleOCR, FastAPI, Ollama). Previously, he was a Data Analyst Intern at JSPIDERS Pvt. Ltd. (May 2025 – Sept 2025) conducting exploratory data analysis on student performance datasets."
   },
   {
     "keywords": [
       "projects",
+      "leads",
+      "enrichment",
       "rag",
       "qa",
-      "regression",
-      "laptop",
-      "price",
-      "ocr",
+      "b2b",
       "work"
     ],
-    "response": "Ankit has built 3 major AI & data systems: 1) WorksBuddy Local Document AI (PaddleOCR + local LLMs in FastAPI), 2) Retrieval-Augmented Q&A System (LangChain & FAISS with agentic fallback), and 3) Laptop Price Prediction model (supervised ML regression using Scikit-Learn)."
+    "response": "Ankit's featured engineering projects are: 1) Autonomous AI Leads & People Enrichment Platform (FastAPI, Next.js, Redis Streams, Groq LLMs, SERP discovery & SMTP verification processing 5,000-10,000+ profiles), and 2) Retrieval-Augmented Q&A System (RAG) (LangChain, FAISS, OpenAI/HuggingFace embeddings, and CrewAI/LangGraph dynamic agent orchestration)."
   },
   {
     "keywords": [
-      "certifications",
-      "cisco",
-      "endpoint",
-      "security",
-      "badge"
+      "skills",
+      "technologies",
+      "stack",
+      "tools"
     ],
-    "response": "Ankit holds a verified certification in Endpoint Security from Cisco Networking Academy, demonstrating capabilities in endpoint protection, threat mitigation, and network security concepts."
+    "response": "Ankit's technical skill set covers Generative & Agentic AI (LLMs, LangChain, LangGraph, CrewAI, MCP, RAG, Ollama, Groq), Backend & APIs (FastAPI, Flask, REST APIs, GraphQL, Pydantic), Databases (PostgreSQL, MySQL, Redis, ChromaDB, FAISS, Pinecone), Deep Learning & ML (TensorFlow, Keras, PyTorch concepts, Scikit-learn, XGBoost), OCR & Document Intelligence (PaddleOCR), Cloud (Azure, Docker), and Analytics (Pandas, NumPy, Matplotlib, Seaborn, Tableau, Power BI)."
   },
   {
     "keywords": [
@@ -55,6 +55,6 @@
       "linkedin",
       "hire"
     ],
-    "response": "You can reach Ankit via Email: ankit.as.singh12@gmail.com, Phone: +91 8777728034, GitHub: github.com/AnkitSingh-12, or LinkedIn: linkedin.com/in/ankitsingh12."
+    "response": "You can reach Ankit directly via Email: ankit.as.singh12@gmail.com, Phone: +91 8777728034, LinkedIn: linkedin.com/in/ankitsingh12, or GitHub: github.com/AnkitSingh-12."
   }
 ]

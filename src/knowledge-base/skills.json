@@ -1,31 +1,116 @@
 [
   {
-    "category": "GenAI, Agentic AI & NLP",
+    "category": "Generative AI & Agentic AI",
     "skills": [
-      { "name": "Agentic AI & Orchestration", "level": 90, "icon": "Cpu", "tags": ["LangGraph", "CrewAI", "MCP", "Multi-Agent Systems"] },
-      { "name": "RAG & LLM Pipelines", "level": 92, "icon": "Sparkles", "tags": ["LangChain", "FAISS", "ChromaDB", "Prompt Engineering", "OpenAI/HuggingFace Embeddings"] },
-      { "name": "Deep Learning & NLP", "level": 86, "icon": "Brain", "tags": ["CNN", "RNN", "LSTM", "Transformers", "Encoders-Decoders"] }
+      {
+        "name": "Agentic AI & Multi-Agent Frameworks",
+        "level": 94,
+        "icon": "Cpu",
+        "tags": ["LangGraph", "CrewAI", "MCP (Model Context Protocol)", "AI Agents", "Tool Calling"]
+      },
+      {
+        "name": "LLMs & RAG Architectures",
+        "level": 95,
+        "icon": "Sparkles",
+        "tags": ["LLMs", "LangChain", "RAG", "Prompt Engineering", "Ollama", "Groq LLMs"]
+      },
+      {
+        "name": "NLP & Text Embeddings",
+        "level": 90,
+        "icon": "Brain",
+        "tags": ["Transformers", "Hugging Face", "OpenAI Embeddings", "Text Embeddings", "NLTK"]
+      }
     ]
   },
   {
-    "category": "AI Engineers & OCR Pipelines",
+    "category": "OCR & Document Intelligence",
     "skills": [
-      { "name": "Document Intelligence", "level": 94, "icon": "FileCode", "tags": ["FastAPI", "PaddleOCR", "Local LLMs", "Ollama", "Llama 3.2 / Phi-3", "Pydantic Validation"] },
-      { "name": "Python Machine Learning", "level": 90, "icon": "Code", "tags": ["Regression", "Classification", "Decision Trees", "Random Forest", "XGBoost", "Scikit-Learn"] }
+      {
+        "name": "Document Intelligence Pipelines",
+        "level": 95,
+        "icon": "FileCode",
+        "tags": ["PaddleOCR", "PDF Processing", "Structured Data Extraction", "Document Intelligence"]
+      },
+      {
+        "name": "Local LLM Inference & Extraction",
+        "level": 92,
+        "icon": "Server",
+        "tags": ["Ollama (Phi-3 / Llama 3.2, Qwen3:8B)", "FastAPI", "Pydantic Schema Validation", "REST APIs"]
+      }
     ]
   },
   {
-    "category": "Data Analytics & Databases",
+    "category": "Backend & Cloud Engineering",
     "skills": [
-      { "name": "Exploratory Data Analysis", "level": 92, "icon": "BarChart2", "tags": ["Pandas", "NumPy", "Data Cleaning", "Feature Engineering"] },
-      { "name": "Databases & Storage", "level": 88, "icon": "Database", "tags": ["PostgreSQL", "MySQL", "ChromaDB", "FAISS", "Pinecone"] }
+      {
+        "name": "Backend, APIs & Real-Time Voice",
+        "level": 92,
+        "icon": "Code",
+        "tags": ["Python", "FastAPI", "Flask", "GraphQL", "REST APIs", "Pipecat", "LiveKit", "Twilio"]
+      },
+      {
+        "name": "Cloud, DevOps & Streaming",
+        "level": 88,
+        "icon": "Cloud",
+        "tags": ["Azure", "Docker", "Redis Streams", "AWS (Basic)"]
+      }
     ]
   },
   {
-    "category": "Tools & Data Visualization",
+    "category": "Databases & Vector Stores",
     "skills": [
-      { "name": "Data Visualization", "level": 86, "icon": "TrendingUp", "tags": ["Matplotlib", "Seaborn", "Tableau", "Power BI", "Dashboards"] },
-      { "name": "Tools & Development", "level": 90, "icon": "Server", "tags": ["Git", "GitHub", "Jira", "Streamlit", "VS Code", "Jupyter Notebook", "REST APIs"] }
+      {
+        "name": "Vector Databases & Search",
+        "level": 92,
+        "icon": "Database",
+        "tags": ["FAISS", "ChromaDB", "Pinecone", "Semantic Retrieval"]
+      },
+      {
+        "name": "Relational & In-Memory Stores",
+        "level": 90,
+        "icon": "Layers",
+        "tags": ["PostgreSQL", "MySQL", "Redis", "SQLite", "SQL"]
+      }
+    ]
+  },
+  {
+    "category": "Data Science, ML & Deep Learning",
+    "skills": [
+      {
+        "name": "Machine Learning & Analytics",
+        "level": 90,
+        "icon": "BarChart2",
+        "tags": ["NumPy", "Pandas", "Scikit-learn", "XGBoost", "Feature Engineering", "Regression", "Classification"]
+      },
+      {
+        "name": "Deep Learning & Neural Architectures",
+        "level": 88,
+        "icon": "Brain",
+        "tags": ["TensorFlow", "Keras", "CNN", "ANN", "RNN", "LSTM", "GRU", "Encoders & Decoders"]
+      },
+      {
+        "name": "Data Visualization & Analytics",
+        "level": 88,
+        "icon": "TrendingUp",
+        "tags": ["Matplotlib", "Seaborn", "Tableau", "Power BI", "Excel", "EDA"]
+      }
+    ]
+  },
+  {
+    "category": "Tools & Professional Practices",
+    "skills": [
+      {
+        "name": "Development Tools",
+        "level": 94,
+        "icon": "Terminal",
+        "tags": ["Git", "GitHub", "VS Code", "Jira", "Streamlit", "Jupyter Notebook", "Google Colab"]
+      },
+      {
+        "name": "Professional Core Competencies",
+        "level": 95,
+        "icon": "ShieldCheck",
+        "tags": ["Problem Solving", "Communication", "Teamwork", "Clean Architecture"]
+      }
     ]
   }
 ]

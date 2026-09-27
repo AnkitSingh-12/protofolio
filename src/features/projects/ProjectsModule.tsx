@@ -11,6 +11,24 @@ export const ProjectsModule: React.FC = () => {
   const { projects } = state;
 
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const [filter, setFilter] = useState<'ALL' | 'EXPERIENCE' | 'STANDALONE'>('ALL');
+
+  const filteredProjects = projects.filter((p) => {
+    if (filter === 'EXPERIENCE') {
+      return (
+        p.category === 'Experience Project' ||
+        p.subtitle.toLowerCase().includes('worksbuddy') ||
+        p.subtitle.toLowerCase().includes('jspiders')
+      );
+    }
+    if (filter === 'STANDALONE') {
+      return (
+        p.category !== 'Experience Project' &&
+        !p.subtitle.toLowerCase().includes('worksbuddy.ai')
+      );
+    }
+    return true;
+  });
 
   // Editing modal state
   const [editingProject, setEditingProject] = useState<Project | null>(null);
@@ -78,19 +96,53 @@ export const ProjectsModule: React.FC = () => {
 
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyber-cyan/10 border border-cyber-cyan/30 text-cyber-cyan font-mono text-xs">
             <Code className="w-3.5 h-3.5" />
-            <span>REAL GITHUB REPOSITORIES & SOFTWARE PROJECTS</span>
+            <span>REAL GITHUB REPOSITORIES &amp; PRODUCTION ENTERPRISE SYSTEMS</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-display font-bold text-white">
-            Engineering Projects & Case Studies
+            Engineering Projects &amp; Case Studies
           </h2>
-          <p className="text-slate-400 text-sm max-w-2xl mx-auto">
-            Deep technical case studies covering WorksBuddy OCR, Retrieval-Augmented Q&A, and Laptop Price Prediction.
+          <p className="text-slate-400 text-sm max-w-3xl mx-auto">
+            Technical case studies covering both production experience initiatives (MCP Business Agents, Real-Time Voice Agent, WorksBuddy OCR, Student Performance Analysis) and core engineering systems (Autonomous AI Leads Platform, Retrieval-Augmented Q&amp;A System).
           </p>
+        </div>
+
+        {/* Project Category Filter Tabs */}
+        <div className="flex flex-wrap items-center justify-center gap-2">
+          <button
+            onClick={() => setFilter('ALL')}
+            className={`px-4 py-2 rounded-xl text-xs font-mono font-bold transition-all ${
+              filter === 'ALL'
+                ? 'bg-gradient-to-r from-cyber-cyan to-cyber-indigo text-cyber-dark shadow-neon-cyan'
+                : 'bg-cyber-surface/80 border border-cyber-border text-slate-300 hover:text-white hover:border-slate-500'
+            }`}
+          >
+            All Projects ({projects.length})
+          </button>
+          <button
+            onClick={() => setFilter('EXPERIENCE')}
+            className={`px-4 py-2 rounded-xl text-xs font-mono font-bold transition-all ${
+              filter === 'EXPERIENCE'
+                ? 'bg-gradient-to-r from-cyber-emerald to-cyber-cyan text-cyber-dark shadow-neon-emerald'
+                : 'bg-cyber-surface/80 border border-cyber-border text-slate-300 hover:text-white hover:border-slate-500'
+            }`}
+          >
+            Experience Projects ({projects.filter((p) => p.category === 'Experience Project' || p.subtitle.toLowerCase().includes('worksbuddy') || p.subtitle.toLowerCase().includes('jspiders')).length})
+          </button>
+          <button
+            onClick={() => setFilter('STANDALONE')}
+            className={`px-4 py-2 rounded-xl text-xs font-mono font-bold transition-all ${
+              filter === 'STANDALONE'
+                ? 'bg-gradient-to-r from-cyber-indigo to-cyber-cyan text-white shadow-neon-indigo'
+                : 'bg-cyber-surface/80 border border-cyber-border text-slate-300 hover:text-white hover:border-slate-500'
+            }`}
+          >
+            Independent Systems ({projects.filter((p) => p.category !== 'Experience Project' && !p.subtitle.toLowerCase().includes('worksbuddy.ai')).length})
+          </button>
         </div>
 
         {/* Project Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {projects.map((proj) => (
+          {filteredProjects.map((proj) => (
             <div
               key={proj.id}
               className="p-6 rounded-2xl bg-cyber-surface/70 border border-cyber-border space-y-5 backdrop-blur-md hover:border-cyber-cyan/50 transition-all flex flex-col justify-between group relative"
@@ -120,7 +172,11 @@ export const ProjectsModule: React.FC = () => {
 
               <div className="space-y-3">
                 <div className="flex items-center justify-between">
-                  <span className="px-2.5 py-0.5 rounded-full bg-cyber-dark text-cyber-cyan text-[11px] font-mono border border-cyber-cyan/30 font-bold">
+                  <span className={`px-2.5 py-0.5 rounded-full text-[11px] font-mono border font-bold ${
+                    proj.category === 'Experience Project'
+                      ? 'bg-cyber-emerald/15 text-cyber-emerald border-cyber-emerald/40'
+                      : 'bg-cyber-cyan/15 text-cyber-cyan border-cyber-cyan/40'
+                  }`}>
                     {proj.category}
                   </span>
                   <span className="text-[11px] font-mono text-slate-400">{proj.year}</span>

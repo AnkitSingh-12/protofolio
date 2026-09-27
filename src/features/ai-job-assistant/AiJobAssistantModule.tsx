@@ -19,11 +19,11 @@ export const AiJobAssistantModule: React.FC = () => {
 
     const letter = `Dear Hiring Manager at ${companyName},
 
-I am writing to express my enthusiastic interest in the ${jobTitle} position at ${companyName}. As a Computer Science & Engineering (AI & ML) graduate from Chandigarh Engineering College and an active AI Engineer at LBM Solution Pvt. Ltd., my background in Python, FastAPI, agentic workflows (LangGraph/CrewAI), and local OCR/LLM pipelines aligns directly with your engineering requirements.
+I am writing to express my enthusiastic interest in the ${jobTitle} position at ${companyName}. As a Computer Science & Engineering graduate from Chandigarh Engineering College and an AI / Generative AI Engineer at LBM Solution Pvt. Ltd. (WorksBuddy.Ai), my hands-on background in Python, FastAPI, agentic workflows (LangGraph/CrewAI/MCP), real-time voice pipelines, and production document intelligence systems aligns directly with your engineering requirements.
 
-In my recent work, I designed and deployed a local Document Intelligence pipeline (WorksBuddy) using PaddleOCR and locally-hosted LLMs that reduced data-entry efforts by ~70%. Additionally, I developed an end-to-end Retrieval-Augmented Q&A System (RAG) with agentic self-correction mechanisms in LangGraph.
+In my work at WorksBuddy, I developed MCP-based AI business agents (Lio, Taro, Evox & Inzo), engineered a sub-2s latency multilingual voice agent, and deployed a local Document Intelligence pipeline using PaddleOCR and local LLMs that reduced data-entry efforts by ~70%. Furthermore, I engineered an Autonomous AI Leads & People Enrichment Platform processing 5,000-10,000+ profiles and an end-to-end Retrieval-Augmented Q&A System (RAG) with dynamic agentic orchestration.
 
-I hold a verified Cisco Networking Academy certification in Endpoint Security. I welcome the opportunity to discuss how my technical skills can drive value for ${companyName}.
+I welcome the opportunity to discuss how my technical skills and engineering track record can drive value for ${companyName}.
 
 Sincerely,
 ${profile.fullName}

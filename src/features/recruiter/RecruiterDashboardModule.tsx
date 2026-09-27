@@ -76,7 +76,7 @@ export const RecruiterDashboardModule: React.FC = () => {
             <div className="flex items-center gap-3">
               <div className="w-12 h-12 rounded-xl bg-gradient-to-tr from-cyber-cyan to-cyber-emerald p-[2px] shadow-neon-cyan">
                 <div className="w-full h-full bg-cyber-dark rounded-[10px] flex items-center justify-center font-bold text-cyber-cyan font-display">
-                  SR
+                  AS
                 </div>
               </div>
               <div>
@@ -93,7 +93,7 @@ export const RecruiterDashboardModule: React.FC = () => {
 
               <div className="p-3 rounded-xl bg-cyber-dark border border-cyber-border space-y-1">
                 <div className="text-slate-400">AI Engineer at LBM Solution</div>
-                <div className="font-bold text-cyber-emerald">OCR & Document Intelligence</div>
+                <div className="font-bold text-cyber-emerald">WorksBuddy.Ai (Dec 2025 – Present)</div>
               </div>
             </div>
 

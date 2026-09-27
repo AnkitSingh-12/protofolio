@@ -15,10 +15,10 @@ export const HeroModule: React.FC = () => {
   const [form, setForm] = useState(candidate);
 
   const roles = [
-    'AI Engineer',
-    'Data Analyst',
-    'LLM & RAG Developer',
-    'Machine Learning Specialist',
+    'AI / Generative AI Engineer',
+    'Agentic AI & LLM Specialist',
+    'Document Intelligence & Voice AI Developer',
+    'Data Analyst & ML Specialist',
   ];
 
   const [roleIndex, setRoleIndex] = useState(0);
@@ -105,14 +105,14 @@ export const HeroModule: React.FC = () => {
             <div className="flex items-center justify-center gap-1.5 text-cyber-cyan font-display font-extrabold text-lg sm:text-xl">
               <GraduationCap className="w-5 h-5 text-cyber-cyan" /> B.Tech CSE
             </div>
-            <div className="text-[11px] font-mono text-slate-400">CEC CS Graduate</div>
+            <div className="text-[11px] font-mono text-slate-400">CEC Punjab Graduate</div>
           </div>
 
           <div className="p-4 rounded-2xl bg-cyber-surface/60 border border-cyber-border backdrop-blur-md space-y-1 hover:border-cyber-emerald/50 transition-all">
             <div className="flex items-center justify-center gap-1.5 text-cyber-emerald font-display font-extrabold text-2xl">
-              <Code2 className="w-5 h-5 text-cyber-emerald" /> 3+
+              <Code2 className="w-5 h-5 text-cyber-emerald" /> 2
             </div>
-            <div className="text-[11px] font-mono text-slate-400">Core AI Systems</div>
+            <div className="text-[11px] font-mono text-slate-400">Core AI Projects</div>
           </div>
 
           <div className="p-4 rounded-2xl bg-cyber-surface/60 border border-cyber-border backdrop-blur-md space-y-1 hover:border-cyber-indigo/50 transition-all">
@@ -124,7 +124,7 @@ export const HeroModule: React.FC = () => {
 
           <div className="p-4 rounded-2xl bg-cyber-surface/60 border border-cyber-border backdrop-blur-md space-y-1 hover:border-cyber-cyan/50 transition-all">
             <div className="flex items-center justify-center gap-1.5 text-cyber-cyan font-display font-extrabold text-2xl">
-              <Sparkles className="w-5 h-5 text-cyber-cyan" /> 92%
+              <Sparkles className="w-5 h-5 text-cyber-cyan" /> 95%
             </div>
             <div className="text-[11px] font-mono text-slate-400">AI Readiness Score</div>
           </div>
@@ -183,11 +183,11 @@ export const HeroModule: React.FC = () => {
               </div>
 
               <div>
-                <label className="text-slate-400">VTU USN:</label>
+                <label className="text-slate-400">College / Location:</label>
                 <input
                   type="text"
-                  value={form.usn}
-                  onChange={(e) => setForm({ ...form, usn: e.target.value })}
+                  value={form.location}
+                  onChange={(e) => setForm({ ...form, location: e.target.value })}
                   className="w-full p-2.5 rounded-xl bg-cyber-dark border border-cyber-border text-white focus:outline-none focus:border-cyber-cyan"
                 />
               </div>
@@ -213,7 +213,7 @@ export const HeroModule: React.FC = () => {
               </div>
 
               <div>
-                <label className="text-slate-400">VTU BE CS CGPA:</label>
+                <label className="text-slate-400">Degree & Graduation:</label>
                 <input
                   type="text"
                   value={form.vtuCgpa}

@@ -1,28 +1,36 @@
 [
   {
-    "id": "worksbuddy-ocr",
-    "title": "WorksBuddy - Local Document AI Pipeline",
-    "subtitle": "Production-Grade Local Document Intelligence & OCR Pipeline",
+    "id": "autonomous-ai-leads",
+    "title": "Autonomous AI Leads & People Enrichment Platform",
+    "subtitle": "B2B Prospecting & Web-Scale Enrichment Engine (WorksBuddy)",
     "year": "2026",
-    "category": "AI Engineers & OCR Pipelines",
-    "summary": "Built a scalable local Document Intelligence pipeline for LBM Solution Pvt. Ltd., automating data extraction from invoices, resumes, and visiting cards using FastAPI, PaddleOCR, and local Ollama LLMs (Llama 3.2 / Phi-3) with Pydantic validations.",
-    "techStack": ["Python", "FastAPI", "PaddleOCR", "Ollama (Llama 3.2 / Phi-3)", "Pydantic", "REST APIs"],
-    "githubUrl": "https://github.com/AnkitSingh-12/WorksBuddy-DocumentAI",
+    "category": "Generative AI & Agentic AI",
+    "summary": "Developed a B2B prospecting platform processing 5,000-10,000+ professional profiles using FastAPI, Next.js, Redis, and PostgreSQL/SQLite to collect and organize company, people, and decision-maker information from multiple web sources.",
+    "techStack": [
+      "FastAPI",
+      "Next.js",
+      "Redis",
+      "PostgreSQL",
+      "SQLite",
+      "Groq LLMs (Llama/Qwen)",
+      "Redis Streams"
+    ],
+    "githubUrl": "https://github.com/AnkitSingh-12/autonomous-ai-leads-enrichment",
     "liveUrl": "#",
     "featured": true,
     "metrics": {
-      "dataEntryReduction": "70% Reduction",
-      "processingSpeed": "< 1.5s / Page",
-      "schemaAccuracy": "99.2% Valid JSON"
+      "profilesProcessed": "5,000-10,000+ Profiles",
+      "verificationMethod": "DNS MX / SPF / DMARC",
+      "streamArchitecture": "Redis Streams Workers"
     },
     "caseStudy": {
-      "problem": "Manual document data entry is highly labor-intensive and poses severe privacy and data residency compliance risks when using commercial APIs.",
-      "research": "Compared PaddleOCR, Tesseract, and EasyOCR, selecting PaddleOCR for superior speed and table parsing.",
-      "architecture": "Asynchronous FastAPI microservice piping image/PDF inputs to PaddleOCR layout analyzers, feeding text blocks to a locally hosted Ollama LLM, and validating structured models via Pydantic.",
-      "challenges": "Ensuring output schema consistency and preventing model hallucinations under tight CPU/GPU memory constraints.",
-      "solutions": "Designed specialized system prompts with strict context boundaries and built an automated feedback loop that re-runs structured corrections upon validation errors.",
-      "performance": "Successfully processed multi-page documents under 1.5 seconds per page with a 99.2% schema compliance rate, eliminating external API fees.",
-      "lessonsLearned": "Local open-source LLMs combined with structural validators (Pydantic) are fully capable of enterprise-grade entity extraction."
+      "problem": "Manual B2B prospecting and decision-maker profile collection is slow, expensive, and frequently hindered by authentication walls, invalid contact emails, and static unstructured web data.",
+      "research": "Researched headless discovery patterns and DNS deliverability handshakes to engineer a Google SERP-based discovery mechanism that retrieves professional contact data without requiring LinkedIn session authentication.",
+      "architecture": "A decoupled, asynchronous architecture featuring FastAPI API services, Next.js interface, Redis Streams task queuing, PostgreSQL/SQLite databases, and Groq high-speed LLM inference.",
+      "challenges": "Managing concurrent background scraping workers, avoiding rate limits, scoring deliverability accurately, and generating personalized outreach hooks in real-time.",
+      "solutions": "Orchestrated asynchronous background processing with Redis Streams and concurrent workers, configured an email validation system using DNS MX, SPF, DMARC, and SMTP handshake checks, and implemented Groq (Llama/Qwen) workflows for executive summaries and prospect-quality scoring.",
+      "performance": "Successfully handled 5,000-10,000+ professional profiles with automated deliverability scoring, defensive upserts, deduplication, and CRM synchronization.",
+      "lessonsLearned": "Asynchronous event queues (Redis Streams) paired with ultra-low-latency LLMs (Groq) enable resilient, real-time autonomous data enrichment at enterprise scale."
     }
   },
   {
@@ -30,51 +38,179 @@
     "title": "Retrieval-Augmented Q&A System (RAG)",
     "subtitle": "Multi-Document Q&A Pipeline with Agentic Re-Querying",
     "year": "2026",
-    "category": "GenAI, Agentic AI & NLP",
-    "summary": "Developed an end-to-end RAG pipeline using LangChain, FAISS, and OpenAI/HuggingFace embeddings. Features an integrated CrewAI/LangGraph agent that detects low retrieval confidence and triggers dynamic query expansion.",
-    "techStack": ["Python", "FastAPI", "LangChain", "FAISS", "CrewAI", "LangGraph", "OpenAI Embeddings"],
+    "category": "Generative AI & Agentic AI",
+    "summary": "Constructed an end-to-end RAG pipeline using LangChain, FAISS, and OpenAI/HuggingFace embeddings for semantic question answering across a multi-document corpus with dynamic CrewAI/LangGraph agent orchestration.",
+    "techStack": [
+      "Python",
+      "LangChain",
+      "FAISS",
+      "FastAPI",
+      "OpenAI Embeddings",
+      "HuggingFace",
+      "CrewAI",
+      "LangGraph"
+    ],
     "githubUrl": "https://github.com/AnkitSingh-12/RAG-QA-System",
     "liveUrl": "#",
     "featured": true,
     "metrics": {
-      "retrievalAccuracy": "94% Accuracy",
-      "queryLatency": "< 120ms",
-      "agentSuccessRate": "97% Query Resolution"
+      "retrievalLatency": "< 120ms Latency",
+      "agentResolution": "97% Query Resolution",
+      "accuracyRate": "94% Semantic Precision"
     },
     "caseStudy": {
-      "problem": "Traditional semantic search often suffers from low precision or returns irrelevant context due to vocabulary mismatch and poor document chunking.",
-      "research": "Evaluated document splitters, embedding dimensions, and top-k retrieval bounds, arriving at recursive character splitting with a chunk overlap of 200 tokens.",
-      "architecture": "FastAPI backend exposing retrieval endpoints mapped to a localized FAISS vector store, orchestrating query correction via LangGraph agents.",
-      "challenges": "Handling ambiguous queries or out-of-distribution questions without serving wrong or hallucinated responses.",
-      "solutions": "Implemented a LangGraph supervisor agent that analyzes initial similarity search scores. If confidence falls below 0.75, it spawns a CrewAI search worker to expand the query terms.",
-      "performance": "Maintained retrieval latency under 120ms while resolving 97% of low-confidence queries cleanly.",
-      "lessonsLearned": "Using agentic fallback systems is highly effective at boosting RAG retrieval precision and user satisfaction."
+      "problem": "Standard semantic search frequently suffers from low precision or returns irrelevant context due to vocabulary mismatch, poor chunking strategies, and ambiguous user prompts.",
+      "research": "Evaluated document splitters, recursive character chunking boundaries, and vector similarity thresholds across FAISS vector indexes to optimize retrieved context quality.",
+      "architecture": "FastAPI REST API orchestrating document chunking, embedding generation, FAISS similarity search, and a supervisor agent powered by LangGraph and CrewAI.",
+      "challenges": "Handling ambiguous queries or out-of-distribution questions without hallucinating incorrect answers or failing to retrieve relevant context.",
+      "solutions": "Extended the system with CrewAI/LangGraph agent orchestration to dynamically re-query and expand terms against the knowledge base whenever initial retrieval confidence was insufficient.",
+      "performance": "Maintained retrieval latency under 120ms while resolving 97% of low-confidence or ambiguous queries cleanly through real-time FastAPI endpoints.",
+      "lessonsLearned": "Dynamic multi-agent re-querying loops overcome standard semantic search blindspots, drastically improving downstream response reliability."
     }
   },
   {
-    "id": "laptop-price-prediction",
-    "title": "Laptop Price Prediction",
-    "subtitle": "Supervised Machine Learning Regression & Feature Engineering Model",
-    "year": "2025",
-    "category": "AI Engineers & OCR Pipelines",
-    "summary": "Built a supervised regression model predicting laptop prices from hardware configurations. Performed exploratory data analysis, target encoding, log transformations, and hyperparameter tuning using Scikit-Learn.",
-    "techStack": ["Python", "Scikit-Learn", "Pandas", "NumPy", "Matplotlib", "Seaborn", "Jupyter Notebook"],
-    "githubUrl": "https://github.com/AnkitSingh-12/Laptop-Price-Prediction",
+    "id": "mcp-business-agents",
+    "title": "MCP-Based Business Agents — Lio, Taro, Evox & Inzo",
+    "subtitle": "Multi-Agent Operational Automation & Tool-Calling (WorksBuddy.Ai)",
+    "year": "2026",
+    "category": "Experience Project",
+    "summary": "Developed MCP-based AI agents for lead, task, email, and invoice management, integrating business APIs to automate operational processes and execute application-level actions.",
+    "techStack": [
+      "Python",
+      "FastAPI",
+      "MCP (Model Context Protocol)",
+      "REST APIs",
+      "Agent Orchestration",
+      "Tool Calling",
+      "Data Synchronization"
+    ],
+    "githubUrl": "https://github.com/AnkitSingh-12",
     "liveUrl": "#",
     "featured": true,
     "metrics": {
-      "r2Score": "89.5% Accuracy",
-      "datasetSize": "10,000+ Records",
-      "features": "12 Core Specs"
+      "specializedAgents": "4 Agents (Lio, Taro, Evox, Inzo)",
+      "protocol": "Model Context Protocol (MCP)",
+      "integration": "Bi-Directional API Sync"
     },
     "caseStudy": {
-      "problem": "Categorical attributes and manufacturer pricing strategies introduce heavy non-linearity into raw market prices, making simple regressions inaccurate.",
-      "research": "Conducted thorough EDA to identify price skewness and applied log scaling on the target variable to achieve a normal distribution.",
-      "architecture": "A clean pipeline in Jupyter executing dataset cleansing, target-encoding brand categorical fields, and scaling numeric metrics.",
-      "challenges": "Controlling overfitting on high-cardinality columns like processor model numbers.",
-      "solutions": "Optimized models using Grid Search on Random Forest Regressors, comparing results against Linear and Decision Tree baselines.",
-      "performance": "The tuned Random Forest model achieved an 89.5% R2 score with a mean absolute percentage error (MAPE) under 8%.",
-      "lessonsLearned": "Rigorous data preprocessing and categorical feature engineering are the most critical factors for tabular model performance."
+      "problem": "Managing leads, client tasks, transactional emails, and invoice creation required human operations across multiple isolated enterprise portals.",
+      "research": "Adopted the Model Context Protocol (MCP) to standardize context injection, server-client handshakes, and verifiable tool-calling schemas.",
+      "architecture": "A Python & FastAPI orchestration server exposing MCP tools to four specialized agent personas (Lio, Taro, Evox, Inzo) coordinating state with business databases.",
+      "challenges": "Ensuring state consistency, robust error recovery during chained API invocations, and preventing unintended tool activations.",
+      "solutions": "Engineered agent orchestration, tool calling, and context-aware execution with Python and REST APIs, incorporating data synchronization and error handling for reliable backend communication.",
+      "performance": "Established structured data exchange with third-party services and business systems to maintain consistent application state across interconnected workflows.",
+      "lessonsLearned": "Standardizing tools via MCP enables reliable agent autonomy while preserving strict enterprise authorization and auditability."
+    }
+  },
+  {
+    "id": "realtime-ai-voice-agent",
+    "title": "Real-Time Multilingual AI Voice Agent",
+    "subtitle": "Sub-2s Conversational Voice Pipeline with Persistent Memory (WorksBuddy)",
+    "year": "2026",
+    "category": "Experience Project",
+    "summary": "Architected a multilingual conversational system supporting 3 languages using LangGraph with specialized agents for FAQs, knowledge-base queries, and task execution, achieving 1-2 second response latency.",
+    "techStack": [
+      "Python",
+      "FastAPI",
+      "LangGraph",
+      "Pipecat",
+      "LiveKit",
+      "Deepgram STT",
+      "ElevenLabs TTS",
+      "Mem0",
+      "Next.js",
+      "PostgreSQL",
+      "Redis",
+      "Docker",
+      "Azure",
+      "Twilio"
+    ],
+    "githubUrl": "https://github.com/AnkitSingh-12",
+    "liveUrl": "#",
+    "featured": true,
+    "metrics": {
+      "latency": "1–2s End-to-End Latency",
+      "languages": "3 Languages Supported",
+      "telephony": "Twilio & WebRTC Audio"
+    },
+    "caseStudy": {
+      "problem": "Standard voice conversational pipelines experience 4-6 second response latencies, poor interruption handling, and lack of cross-session customer memory.",
+      "research": "Analyzed streaming WebRTC protocols (LiveKit) and audio frame processors (Pipecat) to build a low-overhead streaming audio pipeline.",
+      "architecture": "An asynchronous audio pipeline linking LiveKit and Pipecat to Deepgram STT, routed through LangGraph multi-agent decision controllers, with Mem0 context persistence and ElevenLabs streaming voice synthesis.",
+      "challenges": "Synchronizing speech recognition, agent tool lookups, and telephony latency over mobile networks.",
+      "solutions": "Deployed supporting services with Python, FastAPI, Next.js, PostgreSQL, Redis, Docker, Azure, and Twilio, covering APIs, data persistence, caching, and telephony integration.",
+      "performance": "Achieved 1-2 second end-to-end response latency for speech recognition, streaming, and voice synthesis across 3 supported languages.",
+      "lessonsLearned": "Persistent cross-session memory (Mem0) transforms transactional voice bots into natural, personalized conversational partners."
+    }
+  },
+  {
+    "id": "worksbuddy-document-intelligence",
+    "title": "WorksBuddy - Local Document Intelligence & OCR Solution",
+    "subtitle": "OCR-to-LLM Extraction Pipeline with Zero External API Fees (WorksBuddy)",
+    "year": "2026",
+    "category": "Experience Project",
+    "summary": "Reduced manual data-entry effort by ~70% by developing a Document Intelligence solution with PaddleOCR, FastAPI, and locally hosted LLMs (Ollama - Phi-3 / Llama 3.2) for automated extraction from invoices, resumes, and visiting cards.",
+    "techStack": [
+      "Python",
+      "FastAPI",
+      "PaddleOCR",
+      "Ollama (Phi-3 / Llama 3.2)",
+      "Pydantic Validation",
+      "REST APIs",
+      "Document Intelligence",
+      "Structured Data Extraction"
+    ],
+    "githubUrl": "https://github.com/AnkitSingh-12",
+    "liveUrl": "#",
+    "featured": true,
+    "metrics": {
+      "manualEffort": "~70% Reduction",
+      "processingSpeed": "< 1.5s / Page",
+      "dataResidency": "100% On-Premises"
+    },
+    "caseStudy": {
+      "problem": "Manual data-entry from physical and PDF documents (invoices, resumes, visiting cards) is slow and exposes sensitive customer documents to compliance risks on public cloud APIs.",
+      "research": "Benchmarked OCR engines for coordinate layout preservation, selecting PaddleOCR paired with locally hosted quantized LLMs via Ollama.",
+      "architecture": "An end-to-end OCR + LLM pipeline built with FastAPI and PaddleOCR, feeding extracted text blocks into Ollama (Phi-3 / Llama 3.2) and enforcing Pydantic schema validation.",
+      "challenges": "Handling non-standard invoice formatting, skewed smartphone scans, and guaranteeing deterministic JSON outputs.",
+      "solutions": "Designed an OCR-to-LLM processing workflow to transform unstructured image and PDF content into structured information, enforcing Pydantic schema validation for consistent JSON.",
+      "performance": "Delivered a privacy-focused REST API for real-time document ingestion using a fully local stack, reducing data-entry effort by ~70% with zero cloud API costs.",
+      "lessonsLearned": "Strict schema validation combined with local open-source LLMs provides enterprise document extraction reliability at zero marginal API cost."
+    }
+  },
+  {
+    "id": "student-performance-analytics",
+    "title": "Student Performance Data Analysis & Academic Risk Modeling",
+    "subtitle": "Exploratory Data Analysis (EDA) & Statistical Risk Indicators (JSPIDERS)",
+    "year": "2025",
+    "category": "Experience Project",
+    "summary": "Conducted exploratory data analysis (EDA) on student performance datasets using Python, Pandas, NumPy, Matplotlib, and Seaborn, identifying trends, performance patterns, and academic risk indicators.",
+    "techStack": [
+      "Python",
+      "SQL",
+      "NumPy",
+      "Pandas",
+      "Matplotlib",
+      "Seaborn",
+      "Statistical Analysis",
+      "Data Visualization"
+    ],
+    "githubUrl": "https://github.com/AnkitSingh-12",
+    "liveUrl": "#",
+    "featured": false,
+    "metrics": {
+      "varianceIdentified": "Up to 20% Variance",
+      "analysisAxes": "4 Socioeconomic Axes",
+      "dataStack": "Python / Pandas / Seaborn"
+    },
+    "caseStudy": {
+      "problem": "Educators lacked quantifiable insights into the socioeconomic and preparatory drivers affecting student test performance.",
+      "research": "Conducted structured exploratory data analysis across student test scores and demographic attributes to surface meaningful patterns.",
+      "architecture": "A clean statistical pipeline utilizing Pandas, NumPy, Matplotlib, and Seaborn for data cleansing, cohort grouping, distribution analysis, and multivariate comparisons.",
+      "challenges": "Isolating the primary drivers of performance variation across overlapping demographic factors.",
+      "solutions": "Performed segmented statistical analysis across parental education, test preparation, gender, and lunch type to quantify relationships with student performance and identify key outcome drivers.",
+      "performance": "Analyzed performance-group differences and identified patterns associated with up to 20% variance in scores, translating findings into data-driven academic recommendations.",
+      "lessonsLearned": "Segmented statistical comparisons provide far clearer guidance for targeted educational intervention than aggregate class averages."
     }
   }
 ]

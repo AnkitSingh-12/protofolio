@@ -36,24 +36,24 @@ export class ResumeService {
 
     const defaultRoleData = {
       AIML: {
-        profileTitle: 'AI & Machine Learning Engineer Resume',
-        summary: `${candidate.fullName} — AI Engineer specializing in RAG architectures, LangChain, FAISS, and agentic workflows (LangGraph & CrewAI) alongside machine learning regressions and classifications.`,
-        topSkills: ['Agentic AI', 'RAG Architectures', 'LangChain', 'FAISS', 'LangGraph & CrewAI', 'Python ML (Scikit-Learn)'],
+        profileTitle: 'AI / Generative AI Engineer Resume',
+        summary: `${candidate.fullName} — AI Engineer specializing in RAG architectures, LangChain, FAISS, and agentic workflows (LangGraph & CrewAI) alongside machine learning, feature engineering, and LLMs.`,
+        topSkills: ['Generative AI & Agentic AI', 'LangGraph & CrewAI', 'MCP (Model Context Protocol)', 'RAG (LangChain & FAISS)', 'Local LLMs (Ollama) & Groq', 'Python & FastAPI'],
       },
       DATA_ANALYST: {
-        profileTitle: 'Data Analyst & Specialist Resume',
-        summary: `${candidate.fullName} — Experienced Data Analyst skilled in exploratory data analysis (EDA), statistical comparisons, and data visualization (Matplotlib, Seaborn, Tableau, Power BI).`,
-        topSkills: ['Python (Pandas / NumPy)', 'SQL (PostgreSQL / MySQL)', 'Exploratory Data Analysis', 'Statistical Analysis', 'Data Visualization', 'Tableau & Power BI'],
+        profileTitle: 'Data Analyst Specialist Resume',
+        summary: `${candidate.fullName} — Data Analyst proficient in exploratory data analysis (EDA), statistical analysis, performance pattern isolation, and visualization across Python, SQL, Matplotlib, Seaborn, Tableau, and Power BI.`,
+        topSkills: ['Python (Pandas / NumPy)', 'SQL (PostgreSQL / MySQL)', 'Exploratory Data Analysis (EDA)', 'Statistical Analysis', 'Data Visualization', 'Tableau & Power BI'],
       },
       AI_OCR: {
-        profileTitle: 'Document AI & OCR Engineer Resume',
-        summary: `${candidate.fullName} — AI Engineer specializing in local document intelligence pipelines, automating entity extraction from unstructured files via PaddleOCR, FastAPI, and local LLMs (Ollama Llama 3.2 / Phi-3).`,
-        topSkills: ['PaddleOCR', 'Local LLM Inference', 'Ollama (Llama 3.2 / Phi-3)', 'FastAPI & Pydantic', 'Structured JSON Extraction', 'Data Residency Security'],
+        profileTitle: 'Document Intelligence & Voice AI Engineer Resume',
+        summary: `${candidate.fullName} — AI Engineer specializing in production document-intelligence pipelines (PaddleOCR, FastAPI, Ollama), real-time speech systems (Pipecat, LiveKit, ElevenLabs), and MCP business automation.`,
+        topSkills: ['Document Intelligence & OCR', 'PaddleOCR', 'Local LLMs (Ollama)', 'FastAPI & Pydantic', 'Real-Time Voice AI (Pipecat, LiveKit)', 'MCP Automation'],
       },
       FULLSTACK: {
-        profileTitle: 'Web & AI Full-Stack Developer Resume',
-        summary: `${candidate.fullName} — Versatile software engineer building responsive client front-ends and robust FastAPI / Python backend web services.`,
-        topSkills: ['Python', 'FastAPI', 'React 19 & Next.js', 'TypeScript', 'Tailwind CSS', 'PostgreSQL / MySQL'],
+        profileTitle: 'AI / Generative AI Engineer Resume',
+        summary: candidate.bio,
+        topSkills: ['Python & SQL', 'LangChain & LangGraph', 'MCP & Agent Orchestration', 'RAG & Vector Databases', 'FastAPI & REST APIs', 'Data Science & Machine Learning'],
       },
     } as const;
 
@@ -68,7 +68,7 @@ export class ResumeService {
           profileTitle,
           summary,
           topSkills,
-          keyProjects: allProjects.filter((p) => p.id === 'rag-qa-system' || p.id === 'laptop-price-prediction'),
+          keyProjects: allProjects,
           education: allEducation,
           experience: allExperience,
           certifications: allCerts,
@@ -78,7 +78,7 @@ export class ResumeService {
           profileTitle,
           summary,
           topSkills,
-          keyProjects: allProjects.filter((p) => p.id === 'laptop-price-prediction'),
+          keyProjects: allProjects,
           education: allEducation,
           experience: allExperience,
           certifications: allCerts,
@@ -88,7 +88,7 @@ export class ResumeService {
           profileTitle,
           summary,
           topSkills,
-          keyProjects: allProjects.filter((p) => p.id === 'worksbuddy-ocr'),
+          keyProjects: allProjects,
           education: allEducation,
           experience: allExperience,
           certifications: allCerts,
@@ -107,4 +107,3 @@ export class ResumeService {
     }
   }
 }
-

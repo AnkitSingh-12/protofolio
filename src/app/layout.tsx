@@ -14,29 +14,33 @@ const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 const outfit = Outfit({ subsets: ['latin'], variable: '--font-outfit' });
 
 export const metadata: Metadata = {
-  title: 'Ankit Singh | AI Engineer & Data Analyst',
-  description: 'Production-grade developer portfolio website for Ankit Singh (B.Tech CSE AI & ML, Chandigarh Engineering College, AI Engineer at LBM Solution). Built with Next.js 15 & client-side AI tools.',
+  title: 'Ankit Singh | AI / Generative AI Engineer',
+  description: 'Production portfolio of Ankit Singh - AI / Generative AI Engineer specializing in Agentic AI (LangGraph, CrewAI, MCP), RAG pipelines, real-time voice architectures, and document intelligence systems.',
   keywords: [
     'Ankit Singh',
     'AI Engineer',
-    'Data Analyst',
+    'Generative AI',
+    'Agentic AI',
+    'LangGraph',
+    'CrewAI',
+    'MCP',
+    'RAG',
+    'FastAPI',
+    'Python',
     'Chandigarh Engineering College',
-    'FastAPI Python',
-    'WorksBuddy OCR',
-    'RAG Q&A System',
-    'Machine Learning',
+    'WorksBuddy',
   ],
   authors: [{ name: 'Ankit Singh' }],
   openGraph: {
-    title: 'Ankit Singh | AI Engineer & Data Analyst Portfolio',
-    description: 'Production-grade AI portfolio featuring WorksBuddy OCR, RAG System, and supervised ML models.',
+    title: 'Ankit Singh | AI / Generative AI Engineer Portfolio',
+    description: 'Explore Autonomous AI Leads Enrichment Platform, Retrieval-Augmented Q&A System, and Real-Time Voice Agent systems.',
     type: 'website',
-    url: process.env.NEXT_PUBLIC_SITE_URL || 'https://ankit-portfolio.netlify.app',
+    url: process.env.NEXT_PUBLIC_SITE_URL || 'https://ankit-portfolio-ai.netlify.app',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Ankit Singh | AI Engineer & Data Analyst',
-    description: 'Explore WorksBuddy OCR, RAG Q&A System, and machine learning projects.',
+    title: 'Ankit Singh | AI / Generative AI Engineer',
+    description: 'Explore Autonomous AI Leads Enrichment Platform, Retrieval-Augmented Q&A System, and Real-Time Voice Agent systems.',
   },
 };
 

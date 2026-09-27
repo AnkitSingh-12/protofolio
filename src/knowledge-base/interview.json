@@ -1,18 +1,24 @@
 [
   {
-    "role": "AI / ML Engineer",
+    "role": "AI / Generative AI Engineer",
     "questions": [
       {
         "id": "aiml-1",
-        "question": "How did you design the local document intelligence pipeline in WorksBuddy to run without external API costs?",
-        "idealKeywords": ["fastapi", "paddleocr", "ollama", "local llm", "llama 3.2", "pydantic", "data residency"],
-        "sampleAnswer": "In WorksBuddy, we designed a fully local pipeline. First, we run PaddleOCR locally to detect text layout and extract raw characters. We pass these blocks to a local Ollama LLM (running Llama 3.2 or Phi-3) using structured system prompts, and validate the output using Pydantic models. This avoids cloud costs, ensures strict data residency compliance, and reduces data-entry efforts by ~70%."
+        "question": "How did you design the MCP-Based Business Agents and Real-Time Voice Agent at WorksBuddy?",
+        "idealKeywords": ["mcp", "model context protocol", "langgraph", "pipecat", "livekit", "deepgram", "elevenlabs", "mem0", "voice pipeline", "tool calling"],
+        "sampleAnswer": "For WorksBuddy, I developed MCP-based AI agents (Lio, Taro, Evox & Inzo) for lead, task, email, and invoice management, integrating business APIs with context-aware execution and robust error handling. In parallel, I architected a multilingual real-time voice agent using LangGraph, Pipecat, LiveKit, Deepgram STT, and ElevenLabs TTS with Mem0 memory integration, achieving 1-2 second end-to-end response latency across APIs and telephony."
       },
       {
         "id": "aiml-2",
-        "question": "What role does the agentic supervisor play in your RAG pipeline?",
-        "idealKeywords": ["langchain", "faiss", "langgraph", "crewai", "confidence score", "fallback", "query expansion"],
-        "sampleAnswer": "We integrated a LangGraph supervisor agent over our standard LangChain RAG pipeline. When a similarity query is run in FAISS, the supervisor checks the retrieval score. If the score falls below a threshold, it activates a secondary CrewAI agent to dynamically expand the query terms, correcting vocabulary mismatches before retrieving again. This fallback loop ensures 97% of previously ambiguous queries are correctly resolved."
+        "question": "What role does agentic orchestration play in your Retrieval-Augmented Q&A System (RAG)?",
+        "idealKeywords": ["langchain", "faiss", "langgraph", "crewai", "confidence score", "fallback", "query expansion", "re-query"],
+        "sampleAnswer": "We integrated a LangGraph supervisor agent over our LangChain RAG pipeline. When a similarity query is run in FAISS, the supervisor checks the retrieval confidence. If the retrieved context is insufficient or ambiguous, it triggers a dynamic CrewAI re-querying agent to expand terms and resolve vocabulary mismatches, boosting query resolution to 97%."
+      },
+      {
+        "id": "aiml-3",
+        "question": "How did you implement the Document Intelligence OCR pipeline with local LLMs?",
+        "idealKeywords": ["fastapi", "paddleocr", "ollama", "local llm", "phi-3", "llama 3.2", "pydantic", "data residency"],
+        "sampleAnswer": "We built a privacy-focused REST API using FastAPI, PaddleOCR, and local Ollama LLMs (Phi-3 / Llama 3.2). PaddleOCR performs character and layout extraction from invoices, resumes, and visiting cards, which is structured by the local LLM and strictly validated using Pydantic schemas, reducing manual data-entry by ~70% without external API costs."
       }
     ]
   },
@@ -21,15 +27,15 @@
     "questions": [
       {
         "id": "da-1",
-        "question": "How did you identify key performance factors during your student dataset analysis at JSPIDERS?",
-        "idealKeywords": ["eda", "exploratory data analysis", "pandas", "seaborn", "score variance", "statistical comparison"],
-        "sampleAnswer": "I conducted exploratory data analysis (EDA) using Pandas and Seaborn to visualize distributions. By segmenting students based on parental education levels, test preparation, and sociological features, I built comparisons that showed where performance gaps were largest, identifying critical risk patterns and reducing variance by 20%."
+        "question": "How did you identify key academic outcome drivers during your internship at JSPIDERS?",
+        "idealKeywords": ["eda", "exploratory data analysis", "pandas", "seaborn", "score variance", "statistical comparison", "risk indicators"],
+        "sampleAnswer": "At JSPIDERS, I conducted exploratory data analysis (EDA) on student performance datasets using Python, Pandas, NumPy, Matplotlib, and Seaborn. By segmenting data across parental education, test preparation, gender, and lunch type, I quantified relationships associated with up to 20% variance in scores, delivering data-driven recommendations for academic improvement."
       },
       {
         "id": "da-2",
-        "question": "Explain how you address target variable skewness in tabular regression models.",
-        "idealKeywords": ["skewness", "log transform", "normal distribution", "scaling", "random forest", "residuals"],
-        "sampleAnswer": "Continuous targets like price often exhibit right-skewness, causing model residuals to violate homoscedasticity assumptions. In my laptop price prediction project, I applied a log transformation to normalize the distribution, scaling features with StandardScaler before training the Random Forest regressor, which boosted R2 accuracy to 89.5%."
+        "question": "How did you design the Autonomous AI Leads & People Enrichment Platform for high concurrency?",
+        "idealKeywords": ["redis streams", "fastapi", "smtp", "dns mx", "spf", "dmarc", "groq", "postgresql", "deduplication"],
+        "sampleAnswer": "I engineered the platform using FastAPI, Next.js, and Redis Streams with concurrent workers to process 5,000-10,000+ professional profiles. It performs Google SERP profile discovery without LinkedIn auth, verifies emails via DNS MX/SPF/DMARC and SMTP handshake checks, and runs Groq LLMs (Llama/Qwen) for executive summaries and prospect-quality scoring with defensive database upserts."
       }
     ]
   }

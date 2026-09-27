@@ -38,9 +38,10 @@ export class TFIDFMatcher {
     const missing: string[] = [];
 
     const keyTechKeywords = [
-      'python', 'react', 'fastapi', 'sql', 'postgresql', 'machine learning',
-      'deep learning', 'azure', 'cisco', 'security', 'nlp', 'next.js', 'typescript',
-      'javascript', 'git', 'docker', 'rest api', 'cybersecurity', 'algorithms', 'dsa'
+      'python', 'fastapi', 'sql', 'postgresql', 'machine learning',
+      'deep learning', 'azure', 'docker', 'nlp', 'next.js', 'redis',
+      'rag', 'langchain', 'langgraph', 'crewai', 'mcp', 'paddleocr',
+      'ollama', 'groq', 'faiss', 'rest api', 'algorithms', 'git'
     ];
 
     keyTechKeywords.forEach((keyword) => {

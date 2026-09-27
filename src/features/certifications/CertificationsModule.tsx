@@ -40,6 +40,10 @@ export const CertificationsModule: React.FC = () => {
     updateCertifications(certifications.filter((c) => c.id !== id));
   };
 
+  if (certifications.length === 0 && !editMode) {
+    return null;
+  }
+
   return (
     <section id="certifications" className="py-20 px-4 sm:px-6 lg:px-8 relative z-10 font-sans">
       <div className="max-w-7xl mx-auto space-y-12">
@@ -62,13 +66,13 @@ export const CertificationsModule: React.FC = () => {
 
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyber-emerald/10 border border-cyber-emerald/30 text-cyber-emerald font-mono text-xs">
             <Award className="w-3.5 h-3.5" />
-            <span>VERIFIED INDUSTRY & UNIVERSITY CREDENTIALS</span>
+            <span>VERIFIED CREDENTIALS</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-display font-bold text-white">
             Certifications & Badges
           </h2>
           <p className="text-slate-400 text-sm max-w-2xl mx-auto">
-            VTU Belagavi Elite GOLD (React & Python Internship), KGTTI Kalaburagi Cyber Security, Cisco Endpoint Security, and Azure AI Foundry SDK.
+            Verified industry credentials and technical certifications.
           </p>
         </div>
 
